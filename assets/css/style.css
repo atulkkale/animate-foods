@@ -179,8 +179,17 @@ sub { bottom: -.25em; }
 
 .table{
   display: block;
+  opacity: 0;
   position: absolute;
   bottom: 0;
+  animation-name: table;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes table{
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .plate{
@@ -191,6 +200,7 @@ sub { bottom: -.25em; }
   z-index: 1;
   animation-name: plate;
   animation-duration: 4s;
+  animation-delay: 1s;
 }
 
 @keyframes plate{
@@ -209,7 +219,7 @@ sub { bottom: -.25em; }
   z-index: 1;
   animation-name: sad;
   animation-duration: 4s;
-  animation-delay: 0.5s;
+  animation-delay: 1.5s;
 }
 
 @keyframes sad{
@@ -220,18 +230,21 @@ sub { bottom: -.25em; }
   100% {right: -300px;}
 }
 
-.headings .bor_sandwich{
-  display: block;
-  color: red;
+.headings h1{
+  color: #ed1c24;
   font-size: 35px;
   text-transform: capitalize;
   position: absolute;
+  transform: translate(-50%,0%);
+}
+
+.headings .bor_sandwich{
+  display: block;
   left: -45%;
   top: 115px;
-  transform: translate(-50%,0%);
   animation-name: bor_sandwich;
   animation-duration: 4s;
-  animation-delay: 0.5s;
+  animation-delay: 1.5s;
 }
 
 @keyframes bor_sandwich{
@@ -242,26 +255,275 @@ sub { bottom: -.25em; }
   100% {left: -45%;}
 }
 
+.headings .sandwicheto{
+  display: block;
+  left: -45%;
+  top: 115px;
+  animation-name: sandwicheto;
+  animation-duration: 4s;
+  animation-delay: 7s;
+}
+
+@keyframes sandwicheto{
+  0%   {left: -45%;}
+  25%  {left: 50%;}
+  50%  {left: 50%;}
+  75%  {left: 50%;}
+  100% {left: -45%;}
+}
+
+.headings .veg_mayo{
+  display: block;
+  left: -47%;
+  top: 115px;
+  animation-name: veg_mayo;
+  animation-duration: 4s;
+  animation-delay: 11s;
+  width: max-content;
+}
+
+@keyframes veg_mayo{
+  0%   {left: -47%;}
+  25%  {left: 50%;}
+  50%  {left: 50%;}
+  75%  {left: 50%;}
+  100% {left: -47%;}
+}
+
+.headings .magic{
+  display: block;
+  left: -47%;
+  top: 115px;
+  animation-name: magic;
+  animation-duration: 4s;
+  animation-delay: 15s;
+  width: max-content;
+  animation-fill-mode: forwards;
+}
+
+@keyframes magic{
+  0%   {left: -47%;}
+  25%  {left: 50%;}
+  50%  {left: 50%;}
+  75%  {left: 50%;}
+  100% {left: 50%;}
+}
+
+.headings button{
+  display: block;
+  position: absolute;
+  padding: 11px 25px;
+  background-color: #3D2A87;
+  font-size: 21px;
+  color: #fff;
+  left: -26%;
+  top: 75px;
+  transform: translate(-50%,0);
+  border: none;
+  border-radius: 10px;
+  text-transform: capitalize;
+  animation-name: button;
+  animation-duration: 4s;
+  animation-delay: 17s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button{
+  0%   {left: -26%; top: 75px;}
+  20%  {left: 50%; top: 225px;}
+  40%  {left: 50%; top: 225px;}
+  60%  {left: 50%; top: 225px;}
+  80%  {left: 50%; top: 225px;}
+  100% {left: 50%; top: 225px;}
+}
+
 .sandwich1{
   display: block;
   position: absolute;
-  left: -37px;
+  left: -240px;
   bottom: 22px;
-  z-index: 1;
+  z-index: 2;
+  animation-name: sandwich1;
+  animation-duration: 10.5s;
+  animation-delay: 4s;
+}
+
+@keyframes sandwich1{
+  0%   {left: -240px;}
+  20%  {left: -37px;}
+  40%  {left: -37px;}
+  60%  {left: -37px;}
+  80%  {left: -37px;}
+  95%  {left: -37px;}
+  100% {left: -240px;}
+}
+
+.knife{
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  left: 15px;
+  bottom: 58px;
+  z-index: 5;
+  transform: rotate(-60deg);
+  animation-name: knife;
+  animation-duration:1s;
+  animation-delay: 6s;
+}
+
+@keyframes knife{
+  0%   {left: 15px; visibility: visible;}
+  20%  {left: 15px; visibility: visible;}
+  85%  {left: 115px; visibility: visible;}
+  90%  {left: 115px; visibility: hidden;}
+  100% {left: 115px; visibility: hidden;}
+}
+
+.mayo{
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: 2px;
+  bottom: 57px;
+  z-index: 4;
+  animation-name: mayo;
+  animation-duration: 8.3s;
+  animation-delay: 6.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mayo{
+  0%   {opacity: 0; left: 2px;}
+  10%  {opacity: 1; left: 2px;}
+  40%  {opacity: 1; left: 2px;}
+  60%  {opacity: 1; left: 2px;}
+  95%  {opacity: 1; left: 2px;}
+  100% {opacity: 1; left: -140px;}
 }
 
 .veggies{
   display: block;
   position: absolute;
-  left: -5px;
+  left: -200px;
   bottom: 44px;
-  z-index: 2;
+  z-index: 3;
+  animation-name: veggies;
+  animation-duration: 10.5s;
+  animation-delay: 4s;
+}
+
+@keyframes veggies{
+  0%   {left: -200px;}
+  20%  {left: -5px;}
+  40%  {left: -5px;}
+  60%  {left: -5px;}
+  80%  {left: -5px;}
+  95%  {left: -5px;}
+  100% {left: -200px;}
 }
 
 .sandwich2{
   display: block;
   position: absolute;
-  left: 2px;
-  bottom: 58px;
-  z-index: 3;
+  left: -200px;
+  bottom: 57px;
+  z-index: 6;
+  animation-name: sandwich2;
+  animation-duration: 10.5s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
+
+@keyframes sandwich2{
+  0%   {left: -200px; bottom: 57px;}
+  20%  {left: 2px; bottom: 57px;}
+  25%  {left: 2px; bottom: 90px;}
+  30%  {left: 2px; bottom: 67px;}
+  35%  {left: 2px; bottom: 67px;}
+  50%  {left: 2px; bottom: 67px;}
+  80%  {left: 2px; bottom: 67px;}
+  95%  {left: 2px; bottom: 67px;}
+  100% {left: -200px; bottom: 67px;}
+}
+
+.happy{
+  display: block;
+  position: absolute;
+  right: -235px;
+  bottom: 102px;
+  animation-name: happy;
+  animation-duration: 4s;
+  animation-delay: 7s;
+}
+
+@keyframes happy{
+  0%   {right: -235px;}
+  20%  {right: -2px;}
+  40%  {right: -2px;}
+  60%  {right: -2px;}
+  80%  {right: -2px;}
+  100% {right: -235px;}
+}
+
+.chef{
+  display: block;
+  position: absolute;
+  right: -245px;
+  bottom: 102px;
+  animation-name: chef;
+  animation-duration: 4s;
+  animation-delay: 11s;
+}
+
+@keyframes chef{
+  0%   {right: -245px;}
+  20%  {right: 0px;}
+  40%  {right: 0px;}
+  60%  {right: 0px;}
+  80%  {right: 0px;}
+  100% {right: -245px;}
+}
+
+.veg_mayo_img{
+  display: block;
+  position: absolute;
+  transform: translate(50%,0);
+  right: -20%;
+  bottom: 20px;
+  animation-name: veg_mayo_img;
+  animation-duration: 4s;
+  animation-delay: 15s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes veg_mayo_img{
+  0%   {right: -20%;}
+  20%  {right: 50%;}
+  40%  {right: 50%;}
+  60%  {right: 50%;}
+  80%  {right: 50%;}
+  100% {right: 50%;}
+}
+
+.hat{
+  display: block;
+  position: absolute;
+  transform: translate(-50%,0);
+  left: -25%;
+  bottom: 370px;
+  animation-name: hat;
+  animation-duration: 4s;
+  animation-delay: 16s;
+  z-index: 8;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hat{
+  0%   {left: -25%; bottom: 370px;}
+  20%  {left: 57%; bottom: 250px;}
+  40%  {left: 57%; bottom: 147px;}
+  60%  {left: 57%; bottom: 147px;}
+  80%  {left: 57%; bottom: 147px;}
+  100% {left: 57%; bottom: 147px;}
+}
+
