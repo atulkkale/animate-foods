@@ -1,4 +1,4 @@
-# Fanfoods Animation Project
+# AnimateFoods Animation Project
 
 This repository contains an animation project I created during my training period at my first company for the brand "Fanfoods." The project was built using only CSS animations and focuses on creating smooth, engaging animations to enhance the brand's visual appeal.
 
@@ -17,13 +17,13 @@ The primary goal of this project was to gain hands-on experience with CSS animat
 To view the project, clone this repository and open `index.html` in a browser.
 
 ```bash
-git clone https://github.com/atulkkale/funfoods.git
-cd funfoods
+git clone https://github.com/atulkkale/animate-foods.git
+cd animate-foods
 open index.html
 ```
 ## Project Link
 
-You can view the live version of the project [here](https://atulkkale.github.io/funfoods/).
+You can view the live version of the project [here](https://atulkkale.github.io/animate-foods/).
 
 ## Screenshots
 
